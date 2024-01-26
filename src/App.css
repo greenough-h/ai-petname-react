@@ -1,38 +1,52 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: monospace;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vb;
+  align-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background: radial-gradient(#b4ffdb, #5280ff);
+  background-repeat: no-repeat;
+  height: 100vb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.InputForm form {
+  background-color: white;
+  max-width: 700px;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 50px 60px;
+}
+
+.InputForm .questions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* do these more organized  */
+.instructions {
+  font-size: 11px;
+  color: gray;
+}
+
+.input {
+  margin: 20px 0;
+}
+
+.name {
+  background-color: white;
+  max-width: 700px;
+  border-radius: 4px;
+  margin: 20px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.Footer a {
+  color: #18357f;
 }

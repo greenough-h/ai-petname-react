@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Typewriter from "typewriter-effect/dist/core";
+// import Typewriter from "typewriter-effect/dist/core";
 
 export default function InputForm() {
   let [petType, setPetType] = useState(null);
   let [vibe, setVibe] = useState(null);
   let [name, setName] = useState(null);
+  // let [ready, setReady] = useState(false);
 
   function updateSpecies(event) {
     setPetType(event.target.value);
@@ -31,43 +32,40 @@ export default function InputForm() {
 
   function displayPetName(response) {
     setName(response.data.answer);
-    // new Typewriter(".pet-name", {
-    //   strings: response.data.answer,
-    //   autoStart: true,
-    //   delay: 1,
-    //   cursor: "",
+    // setReady(true); when ready remove hidden class from the name div
   }
 
   return (
-    <div>
-      <form onSubmit={generateName}>
-        <div className="species-question">
-          <label for="pet-species">What kind of pet do you have?</label>
-          <div className="input">
-            <input
-              id="pet-species"
-              type="text"
-              placeholder="What kind of pet?"
-              required
-              onChange={updateSpecies}
-            />
+    <div className="InputForm">
+      <form onSubmit={generateName} className="container">
+        <div className="questions">
+          <div className="species-question">
+            <label for="pet-species">What kind of pet do you have?</label>
+            <div className="input">
+              <input
+                id="pet-species"
+                type="text"
+                placeholder="What kind of pet?"
+                required
+                onChange={updateSpecies}
+              />
+            </div>
+            <p class="instructions">ex: dog, cat, parrot, lizard, rock</p>
           </div>
-          <p class="instructions">ex: dog, cat, parrot, lizard, rock</p>
-        </div>
-        <div class="vibe">
-          <label for="color-vibe">
-            What color best represents your pet's vibe?
-          </label>
-          <div className="input">
-            <input
-              type="color"
-              id="color-vibe"
-              required
-              value="#987CD8"
-              onChange={updateVibe}
-            />
+          <div class="vibe">
+            <label for="color-vibe">
+              What color best represents your pet's vibe?
+            </label>
+            <div className="input">
+              <input
+                type="color"
+                id="color-vibe"
+                required
+                onChange={updateVibe}
+              />
+            </div>
+            <p class="instructions"> Choose a color</p>
           </div>
-          <p class="instructions"> Choose a color</p>
         </div>
 
         <input type="submit" id="submit" value="Submit" />
