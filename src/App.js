@@ -1,20 +1,11 @@
 import "./App.css";
+import InputForm from "./components/InputForm";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>AI Pet Name Generator</h1>
+      <InputForm />
     </div>
   );
 }
-
-export default App;
