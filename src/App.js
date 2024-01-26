@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <h1>AI Pet Name Generator</h1>
       <InputForm />
-      <div class="pet-name hidden"></div>;
+      <div class="pet-name hidden"></div>
       <Footer />
     </div>
   );
