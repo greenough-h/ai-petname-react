@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import Typewriter from "typewriter-effect/dist/core";
+import GeneratedName from "./GeneratedName";
 
 export default function InputForm() {
   let [petType, setPetType] = useState(null);
   let [vibe, setVibe] = useState(null);
   let [name, setName] = useState(null);
-  // let [ready, setReady] = useState(false);
+  let [ready, setReady] = useState(false);
 
   function updateSpecies(event) {
     setPetType(event.target.value);
@@ -32,7 +32,7 @@ export default function InputForm() {
 
   function displayPetName(response) {
     setName(response.data.answer);
-    // setReady(true); when ready remove hidden class from the name div
+    setReady(true);
   }
 
   return (
@@ -64,13 +64,13 @@ export default function InputForm() {
                 onChange={updateVibe}
               />
             </div>
-            <p class="instructions"> Choose a color</p>
+            <p class="instructions"> Choose a color!</p>
           </div>
         </div>
 
         <input type="submit" id="submit" value="Submit" />
       </form>
-      <div className="name">{name}</div>
+      <GeneratedName name={name} ready={ready} />
     </div>
   );
 }
