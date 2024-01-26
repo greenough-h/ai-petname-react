@@ -39,7 +39,7 @@ export default function InputForm() {
     <div className="InputForm">
       <form onSubmit={generateName} className="container">
         <div className="questions">
-          <div className="species-question">
+          <div className="speciesQuestion">
             <label for="pet-species">What kind of pet do you have?</label>
             <div className="input">
               <input
@@ -50,9 +50,9 @@ export default function InputForm() {
                 onChange={updateSpecies}
               />
             </div>
-            <p class="instructions">ex: dog, cat, parrot, lizard, rock</p>
+            <p className="instructions">ex: dog, cat, parrot, lizard, rock</p>
           </div>
-          <div class="vibe">
+          <div className="vibe">
             <label for="color-vibe">
               What color best represents your pet's vibe?
             </label>

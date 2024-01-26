@@ -8,6 +8,10 @@
   margin-top: 85px;
 }
 
+.App h1 {
+  font-size: 32px;
+}
+
 body {
   background: radial-gradient(#b4ffdb, #5280ff);
   background-repeat: no-repeat;
@@ -60,7 +64,7 @@ body {
 }
 
 .name {
-  font-size: 18px;
+  font-size: 15px;
   background-color: white;
   max-width: 700px;
   border-radius: 4px;
@@ -79,4 +83,33 @@ body {
 
 .Footer a {
   color: #18357f;
+}
+
+@media (max-width: 750px) {
+  .App {
+    margin-top: 30px;
+  }
+
+  .InputForm form,
+  .name {
+    display: block;
+    max-width: 70%;
+    padding: 20px;
+  }
+
+  .questions {
+    flex-direction: column;
+  }
+
+  .speciesQuestion,
+  .vibe {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .Footer {
+    max-width: 70%;
+    font-size: 11px;
+    margin: 0 auto;
+  }
 }
