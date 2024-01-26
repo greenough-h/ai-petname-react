@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100vb;
   align-self: center;
-  margin-top: 75px;
+  margin-top: 85px;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
   border-radius: 4px;
   margin: 20px auto;
   padding: 50px 60px;
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
 .InputForm .questions {
@@ -44,16 +45,36 @@ body {
   margin: 20px 0;
 }
 
+#submit {
+  background-color: #b4ffdb;
+  padding: 8px 16px;
+  border: 1px solid #18357f;
+  border-radius: 4px;
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.2);
+  transition: all 100ms ease-in-out;
+}
+#submit:hover {
+  cursor: pointer;
+  background-color: #5280ff;
+  color: white;
+}
+
 .name {
+  font-size: 18px;
   background-color: white;
   max-width: 700px;
   border-radius: 4px;
   margin: 20px auto;
-  padding: 10px 0;
+  padding: 20px 0;
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
 .hidden {
   display: none;
+}
+
+.Footer {
+  margin-top: 20px;
 }
 
 .Footer a {

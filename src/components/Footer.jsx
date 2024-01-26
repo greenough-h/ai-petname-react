@@ -5,11 +5,9 @@ export default function Footer() {
     <div className="Footer">
       <footer>
         Coded by <strong>Hayley Greenough</strong>, open-sourced on{" "}
-        <a href="https://github.com/greenough-h/AI-pet-name-generator">
-          Github
-        </a>{" "}
-        and hosted on{" "}
-        <a href="https://rolypoly-petnames.netlify.app/">Netlify</a>
+        <a href="https://github.com/greenough-h/ai-petname-react">Github</a> and
+        hosted on{" "}
+        <a href="https://ai-petname-generator.netlify.app/">Netlify</a>
       </footer>
     </div>
   );
